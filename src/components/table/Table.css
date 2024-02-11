@@ -1,0 +1,27 @@
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f2f2f2; /* Header background color */
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Even row background color */
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Odd row background color */
+}
+
+.custom-table button {
+  /* Add any additional styling for your buttons */
+}
