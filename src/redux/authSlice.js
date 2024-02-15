@@ -30,8 +30,8 @@ export const { loginSuccess, logout } = authSlice.actions;
 export const login = (userData) => async (dispatch) => {
   try {
     // const response = await axios.post("http://localhost:5000/users/login", userData);
-    const response = await axios.post("http://192.168.29.251:7000/login", userData);
-    if (response.data.status === 200) {
+    const response = await axios.post("https://userlogin-fg05.onrender.com/users/login", userData);
+    if (response.status === 200) {
       dispatch(loginSuccess(response.data.data));
       return response.data;
     }
@@ -44,8 +44,8 @@ export const login = (userData) => async (dispatch) => {
 export const signup = (userData) => async (dispatch) => {
   try {
     // const response = await axios.post("http://localhost:5000/users/register", userData);
-    const response = await axios.post("http://192.168.29.251:7000/register", userData);
-    if(response.data.status === 201) return response.data;
+    const response = await axios.post("https://userlogin-fg05.onrender.com/users/register", userData);
+    if(response.status === 201) return response.data;
   } catch (error) {
     alert(error.message);
     dispatch(logout());
